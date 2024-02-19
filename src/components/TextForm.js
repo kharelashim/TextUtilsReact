@@ -66,13 +66,9 @@ export default function TextForm(props) {
 
             <div className="count my-3" style={{ backgroundcolour: props.mode === 'dark' ? 'Grey' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }}>
                 <h1>Your text summary:</h1>
-                <p>The above text box has: <b>{text.split(" ").length - 1}</b> words and <b>{text.length}</b> characters.</p>
+                <p>The above text box has: <b>{text.split(" ").length -1}</b> words and <b>{text.length}</b> characters.</p>
                 <p>The above text takes <b>{0.008 * text.split(" ").length}</b> Minutes to read.   </p>
             </div>
-
-            {/* <div className="darkMode">
-                <button className="btn btn-dark" onClick={changeColor}>{btnText}</button>
-            </div> */}
 
 
 

@@ -3,13 +3,13 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import About from './components/About';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
-
+// import About from './components/About';
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes,
+// } from "react-router-dom";
+  
 
 
 
@@ -47,17 +47,17 @@ function App(props) {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar title="TextUtils" mode={mode} enableDarkMode={enableDarkMode} btnText={btnText} />
         <Alert alert={alert} />
         <div className="container my-3 " >
-          <Routes>
-            <Route path="/about" element={<About mode={mode} />} />
-            <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter your text below:" mode={mode} />} />
-          </Routes>
+          {/* <Routes> */}
+            {/* <Route path="/about" element={<About mode={mode} />} /> */}
+            <TextForm showAlert={showAlert} heading="Enter your text below:" mode={mode} />
+          {/* </Routes> */}
 
         </div>
-      </Router>
+      {/* </Router> */}
 
 
 
