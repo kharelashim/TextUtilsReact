@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 export default function TextForm(props) {
 
     const handleUpClick = () => {
-        // console.log("Uppercase was clicked");
         let newText = text.toUpperCase();
         setText(newText)
         props.showAlert("Converted to uppercase!", "success");
@@ -41,7 +40,6 @@ export default function TextForm(props) {
 
 
     const handleOnChange = (event) => {
-        // console.log("The text was changed")
         setText(event.target.value)
     }
 
@@ -66,7 +64,7 @@ export default function TextForm(props) {
 
             <div className="count my-3" style={{ backgroundcolour: props.mode === 'dark' ? 'Grey' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }}>
                 <h1>Your text summary:</h1>
-                <p>The above text box has: <b>{text.split(" ").filter((element)=>{return element.length!==0}).length}</b> words and <b>{text.length}</b> characters.</p>
+                <p>The above text box has: <b>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</b> words and <b>{text.length}</b> characters.</p>
                 <p>The above text takes <b>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length}</b> Minutes to read.   </p>
             </div>
 
